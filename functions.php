@@ -42,6 +42,7 @@ function newGame($player1, $player2){
 	$game = $db->prepare('SELECT * FROM games WHERE ID=:id');
 	$game->bindvalue(':id, $gameid, PDO::PARAM_INT');
 	$game->execute();
+	return $game;
 }
 
 ?>
